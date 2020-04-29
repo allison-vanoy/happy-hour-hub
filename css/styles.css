@@ -1,0 +1,73 @@
+/* main page format */
+body {
+  font-size: 1em;
+  font-family: "Roboto", sans-serif; }
+
+/* header styles */
+header {
+  background-color: #e6e6e6; }
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.7em;
+  color: #000; }
+
+h2 {
+  font-family: "Over the Rainbow", cursive;
+  font-size: 1em; }
+
+/* page filter */
+.fa-filter {
+  font-size: 24px; }
+
+/* search area and sub header */
+.searchRow,
+.subHeading {
+  background-color: #e6e6e6; }
+
+#searcharea {
+  border: 1px solid #fff;
+  border-radius: 15px; }
+  #searcharea input:active,
+  #searcharea input:focus {
+    outline: none; }
+
+/* menu styles */
+#menuBtn {
+  z-index: 1; }
+
+#menuFlyout {
+  top: 0;
+  z-index: 0; }
+
+#navList {
+  margin-top: 90px; }
+
+ul li {
+  font-family: 1.7em;
+  font-size: 1.7em; }
+  ul li a {
+    color: #000; }
+
+/* fixed content styles */
+.fixedArea {
+  top: 58px;
+  z-index: -1; }
+
+#businessListWrapper {
+  margin-top: 90%; }
+
+/* business content styles */
+h3 {
+  font-size: 1em; }
+
+.distance {
+  font-size: 0.6em; }
+
+.specialsDetails,
+.seeMore {
+  font-size: 0.8em; }
+  .specialsDetails a,
+  .seeMore a {
+    color: #000;
+    text-decoration: underline; }

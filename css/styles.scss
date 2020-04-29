@@ -1,0 +1,100 @@
+$primary-color: #e6e6e6;
+$primary-font: 'Roboto', sans-serif;
+$header-font: 'Oswald', sans-serif;
+$cursive-font: 'Over the Rainbow', cursive;
+$large-font: 1.7em;
+$medium-font: 1em;
+$small-font: 0.8em;
+$x-small-font: 0.6em;
+
+/* main page format */
+body {
+	font-size: $medium-font;
+	font-family: $primary-font;
+}
+
+/* header styles */
+header {
+	background-color: $primary-color;
+}
+
+h1 {
+	font-family: $header-font;
+	font-size: $large-font;
+	color: #000;
+}
+
+h2 {
+	font-family: $cursive-font;
+	font-size: $medium-font;
+}
+
+/* page filter */
+.fa-filter {
+	font-size: 24px;
+}
+
+/* search area and sub header */
+.searchRow,
+.subHeading {
+	background-color: $primary-color;
+}
+
+#searcharea {
+	border: 1px solid #fff;
+	border-radius: 15px;
+		input:active,
+		input:focus {
+			outline: none;
+		}
+}
+
+/* menu styles */
+#menuBtn {
+	z-index: 1;
+}
+
+#menuFlyout {
+	top: 0;
+	z-index: 0;
+}
+
+#navList {
+	margin-top: 90px;
+}
+
+ul li {
+	font-family: $large-font;
+	font-size: $large-font;
+		a {
+			color: #000;
+		}
+}
+
+/* fixed content styles */
+.fixedArea {
+	top: 58px;
+	z-index: -1;
+}
+
+#businessListWrapper {
+	margin-top: 90%;
+}
+
+/* business content styles */
+h3 {
+	font-size: $medium-font;
+}
+
+.distance {
+	font-size: $x-small-font;
+}
+
+.specialsDetails,
+.seeMore {
+	font-size: $small-font;
+		a {
+			color: #000;
+			text-decoration: underline;
+		}
+}

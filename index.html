@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Happy Hour Hub</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Over+the+Rainbow&display=swap" rel="stylesheet">
+
+    <!--font-awesome version 5-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">  
+</head>
+
+<body>
+
+	<!--banner-->
+	<header class="jumbotron-fluid pb-0 pt-1 mb-0 fixed-top">
+        <div class="row">
+            <!--menu toggle control-->
+            <nav class="col-2 navbar navbar-expand-lg navbar-light">
+                <button id="menuBtn" class="navbar-toggler ml-2 border-0" type="button" data-toggle="collapse" data-target="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+
+            <div class="col text-center mt-1">
+                <a href="#"><h1>Happy Hour Hub</h1></a>
+            </div>
+
+            <div class="col-2 mt-2 ml-0">
+                <i class="fa fa-filter"></i>
+            </div>
+        </div>
+	</header>
+
+    <!--collapsing menu flyout-->
+    <div id="menuFlyout" class="card position-absolute h-100">
+        <!--menu options-->
+        <div id="navbarMenu" class="card-body collapse navbar-collapse">
+            <ul id="navList" class="nav d-block">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Add New Happy Hour</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#">My Account</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sign-In</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Create Account</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--main body container-->
+    <div id="mainContainer" class="container-fluid p-0">
+        <div class="fixedArea fixed-top">
+            <!--sub title and search row-->
+            <div class="row subHeading">
+                <div class="col text-center mb-2">
+                    <h2>find or add happy hour specials near you</h2>
+                </div>
+            </div>
+
+            <div class="row pb-3 searchRow">
+                <div id="searcharea" class="col-8 mx-auto bg-white">
+                    <input class="border-0" type="search" placeholder="search by zip code">
+                    <div class="d-inline-block"><i class="fa fa-search"></i></div>
+                </div>
+            </div>
+
+            <!--google map-->
+            <img id="googleMap" class="w-100" src="img/map_img.JPG" alt="Google map placeholder" />
+        </div>
+
+        <!---------------------
+        list of business content
+        ---------------------->
+        <div id="businessListWrapper" class="bg-white">
+            <!--business content (sample 1)-->
+            <div class="businessContainer border p-2">
+                <!--business name and distance-->
+                <div class="row pb-0">
+                    <h3 class="col-9">Sample Business Name</h3>
+                    <p class="col text-right distance">0.2m away</p>
+                </div>
+
+                <!---------------------
+                    list of specials
+                ---------------------->
+                <!--special and price-->
+                <div class="row specialsDetails">
+                    <i class="col-2 fas fa-hamburger pr-0 mt-1"></i>
+                    <p class="col-6 pl-0 mb-1">Bone-in wings</p>
+                    <p class="col-1 mb-0">$</p>
+                    <p class="col text-left pl-0 mb-0">1/2 price</p>
+                </div>
+
+                <!--special and price-->
+                <div class="row specialsDetails">
+                    <i class="col-2 fas fa-beer pr-0 mt-1"></i>
+                    <p class="col-6 pl-0 mb-1">Domestic draughts</p>
+                    <p class="col-1 mb-0">$</p>
+                    <p class="col text-left pl-0 mb-0">2</p>
+                </div>
+
+                <!--special and price-->
+                <div class="row specialsDetails">
+                    <i class="col-2 fas fa-beer pr-0 mt-1"></i>
+                    <p class="col-6 pl-0 mb-1">House wine</p>
+                    <p class="col-1 mb-0">$</p>
+                    <p class="col text-left pl-0 mb-0">1.00 off</p>
+                </div>
+                <!-----------------------
+                    end list of specials
+                ------------------------>
+
+                <!--see more specials link-->
+                <div class="row text-center seeMore">
+                    <div class="col">
+                        <a href="#">see more...</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--business content (sample 2)-->
+            <div class="businessContainer border p-2">
+                <!--business name and distance-->
+                <div class="row pb-0">
+                    <h3 class="col-9">Sample Business Name</h3>
+                    <p class="col text-right distance">0.2m away</p>
+                </div>
+
+                <!---------------------
+                    list of specials
+                ---------------------->
+                <!--special and price-->
+                <div class="row specialsDetails">
+                    <i class="col-2 fas fa-hamburger pr-0 mt-1"></i>
+                    <p class="col-6 pl-0 mb-1">Bone-in wings</p>
+                    <p class="col-1 mb-0">$</p>
+                    <p class="col text-left pl-0 mb-0">1/2 price</p>
+                </div>
+
+                <!--special and price-->
+                <div class="row specialsDetails">
+                    <i class="col-2 fas fa-beer pr-0 mt-1"></i>
+                    <p class="col-6 pl-0 mb-1">Domestic draughts</p>
+                    <p class="col-1 mb-0">$</p>
+                    <p class="col text-left pl-0 mb-0">2</p>
+                </div>
+
+                <!--special and price-->
+                <div class="row specialsDetails">
+                    <i class="col-2 fas fa-beer pr-0 mt-1"></i>
+                    <p class="col-6 pl-0 mb-1">House wine</p>
+                    <p class="col-1 mb-0">$</p>
+                    <p class="col text-left pl-0 mb-0">1.00 off</p>
+                </div>
+                <!-----------------------
+                    end list of specials
+                ------------------------>
+
+                <!--see more specials link-->
+                <div class="row text-center seeMore">
+                    <div class="col">
+                        <a href="#">see more...</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!--business content (sample 3)-->
+            <div class="businessContainer border p-2">
+                <!--business name and distance-->
+                <div class="row pb-0">
+                    <h3 class="col-9">Sample Business Name</h3>
+                    <p class="col text-right distance">0.2m away</p>
+                </div>
+
+                <!---------------------
+                    list of specials
+                ---------------------->
+                <!--special and price-->
+                <div class="row specialsDetails">
+                    <i class="col-2 fas fa-hamburger pr-0 mt-1"></i>
+                    <p class="col-6 pl-0 mb-1">Bone-in wings</p>
+                    <p class="col-1 mb-0">$</p>
+                    <p class="col text-left pl-0 mb-0">1/2 price</p>
+                </div>
+
+                <!--special and price-->
+                <div class="row specialsDetails">
+                    <i class="col-2 fas fa-beer pr-0 mt-1"></i>
+                    <p class="col-6 pl-0 mb-1">Domestic draughts</p>
+                    <p class="col-1 mb-0">$</p>
+                    <p class="col text-left pl-0 mb-0">2</p>
+                </div>
+
+                <!--special and price-->
+                <div class="row specialsDetails">
+                    <i class="col-2 fas fa-beer pr-0 mt-1"></i>
+                    <p class="col-6 pl-0 mb-1">House wine</p>
+                    <p class="col-1 mb-0">$</p>
+                    <p class="col text-left pl-0 mb-0">1.00 off</p>
+                </div>
+                <!-----------------------
+                    end list of specials
+                ------------------------>
+
+                <!--see more specials link-->
+                <div class="row text-center seeMore">
+                    <div class="col">
+                        <a href="#">see more...</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--business content (sample 4)-->
+            <div class="businessContainer border p-2">
+                <!--business name and distance-->
+                <div class="row pb-0">
+                    <h3 class="col-9">Sample Business Name</h3>
+                    <p class="col text-right distance">0.2m away</p>
+                </div>
+
+                <!---------------------
+                    list of specials
+                ---------------------->
+                <!--special and price-->
+                <div class="row specialsDetails">
+                    <i class="col-2 fas fa-hamburger pr-0 mt-1"></i>
+                    <p class="col-6 pl-0 mb-1">Bone-in wings</p>
+                    <p class="col-1 mb-0">$</p>
+                    <p class="col text-left pl-0 mb-0">1/2 price</p>
+                </div>
+
+                <!--special and price-->
+                <div class="row specialsDetails">
+                    <i class="col-2 fas fa-beer pr-0 mt-1"></i>
+                    <p class="col-6 pl-0 mb-1">Domestic draughts</p>
+                    <p class="col-1 mb-0">$</p>
+                    <p class="col text-left pl-0 mb-0">2</p>
+                </div>
+
+                <!--special and price-->
+                <div class="row specialsDetails">
+                    <i class="col-2 fas fa-beer pr-0 mt-1"></i>
+                    <p class="col-6 pl-0 mb-1">House wine</p>
+                    <p class="col-1 mb-0">$</p>
+                    <p class="col text-left pl-0 mb-0">1.00 off</p>
+                </div>
+                <!-----------------------
+                    end list of specials
+                ------------------------>
+
+                <!--see more specials link-->
+                <div class="row text-center seeMore">
+                    <div class="col">
+                        <a href="#">see more...</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--business content (sample 5)-->
+            <div class="businessContainer border p-2">
+                <!--business name and distance-->
+                <div class="row pb-0">
+                    <h3 class="col-9">Sample Business Name</h3>
+                    <p class="col text-right distance">0.2m away</p>
+                </div>
+
+                <!---------------------
+                    list of specials
+                ---------------------->
+                <!--special and price-->
+                <div class="row specialsDetails">
+                    <i class="col-2 fas fa-hamburger pr-0 mt-1"></i>
+                    <p class="col-6 pl-0 mb-1">Bone-in wings</p>
+                    <p class="col-1 mb-0">$</p>
+                    <p class="col text-left pl-0 mb-0">1/2 price</p>
+                </div>
+
+                <!--special and price-->
+                <div class="row specialsDetails">
+                    <i class="col-2 fas fa-beer pr-0 mt-1"></i>
+                    <p class="col-6 pl-0 mb-1">Domestic draughts</p>
+                    <p class="col-1 mb-0">$</p>
+                    <p class="col text-left pl-0 mb-0">2</p>
+                </div>
+
+                <!--special and price-->
+                <div class="row specialsDetails">
+                    <i class="col-2 fas fa-beer pr-0 mt-1"></i>
+                    <p class="col-6 pl-0 mb-1">House wine</p>
+                    <p class="col-1 mb-0">$</p>
+                    <p class="col text-left pl-0 mb-0">1.00 off</p>
+                </div>
+                <!-----------------------
+                    end list of specials
+                ------------------------>
+
+                <!--see more specials link-->
+                <div class="row text-center seeMore">
+                    <div class="col">
+                        <a href="#">see more...</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--business content (sample 6)-->
+            <div class="businessContainer border p-2">
+                <!--business name and distance-->
+                <div class="row pb-0">
+                    <h3 class="col-9">Sample Business Name</h3>
+                    <p class="col text-right distance">0.2m away</p>
+                </div>
+
+                <!---------------------
+                    list of specials
+                ---------------------->
+                <!--special and price-->
+                <div class="row specialsDetails">
+                    <i class="col-2 fas fa-hamburger pr-0 mt-1"></i>
+                    <p class="col-6 pl-0 mb-1">Bone-in wings</p>
+                    <p class="col-1 mb-0">$</p>
+                    <p class="col text-left pl-0 mb-0">1/2 price</p>
+                </div>
+
+                <!--special and price-->
+                <div class="row specialsDetails">
+                    <i class="col-2 fas fa-beer pr-0 mt-1"></i>
+                    <p class="col-6 pl-0 mb-1">Domestic draughts</p>
+                    <p class="col-1 mb-0">$</p>
+                    <p class="col text-left pl-0 mb-0">2</p>
+                </div>
+
+                <!--special and price-->
+                <div class="row specialsDetails">
+                    <i class="col-2 fas fa-beer pr-0 mt-1"></i>
+                    <p class="col-6 pl-0 mb-1">House wine</p>
+                    <p class="col-1 mb-0">$</p>
+                    <p class="col text-left pl-0 mb-0">1.00 off</p>
+                </div>
+                <!-----------------------
+                    end list of specials
+                ------------------------>
+
+                <!--see more specials link-->
+                <div class="row text-center seeMore">
+                    <div class="col">
+                        <a href="#">see more...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-----------------------
+        end list of business
+        ------------------------>
+
+    </div>
+
+
+
+    <!--script links-->
+	<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!--font-awesome version 5-->
+    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/v4-shims.js"></script>
+  
+    <!--custom JS-->
+    <script src="js/scripts.js"></script>
+
+</body>
+
+</html>
