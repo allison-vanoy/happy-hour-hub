@@ -2,6 +2,7 @@ $primary-color: #e6e6e6;
 $primary-font: 'Roboto', sans-serif;
 $header-font: 'Oswald', sans-serif;
 $cursive-font: 'Over the Rainbow', cursive;
+$x-large-font: 2.3em;
 $large-font: 1.7em;
 $medium-font: 1em;
 $small-font: 0.8em;
@@ -21,7 +22,15 @@ header {
 h1 {
 	font-family: $header-font;
 	font-size: $large-font;
-	color: #000;
+	a {
+		color: #000;
+	}	
+		a:hover {
+			text-decoration: none;
+		}
+			@media (min-width: 992px) {
+				font-size: $x-large-font;
+			}
 }
 
 h2 {
@@ -35,7 +44,7 @@ h2 {
 }
 
 /* search area and sub header */
-.searchRow,
+// .searchRow,
 .subHeading {
 	background-color: $primary-color;
 }
@@ -47,6 +56,12 @@ h2 {
 		input:focus {
 			outline: none;
 		}
+		@media (min-width: 992px) {
+			width: 95%;
+			input {
+				width: 90%;
+			}
+		}
 }
 
 /* menu styles */
@@ -54,17 +69,30 @@ h2 {
 	z-index: 1;
 }
 
-#menuFlyout {
+#navbarMenu {
+	position: absolute;
 	top: 0;
-	z-index: 0;
+	z-index: 1;
+	height: 100vh;
+	width: 75vw;
+		@media (min-width: 992px) {
+			position: inherit;
+			height: auto;
+			background-color: $primary-color!important;
+			font-size: $small-font;
+		}
+}
+
+#menuBtn {
+	z-index: 2;
 }
 
 #navList {
-	margin-top: 90px;
+	padding-left: 50px;
 }
 
 ul li {
-	font-family: $large-font;
+	font-family: $header-font;
 	font-size: $large-font;
 		a {
 			color: #000;
@@ -72,16 +100,39 @@ ul li {
 }
 
 /* fixed content styles */
-.fixedArea {
-	top: 58px;
+// .subHeading {
+// 	top: 48px;
+// 		@media (max-width: 991px) {
+// 			top: 58px;
+// 		}
+// }
+	// .searchRow {
+	// 	top: 82px;
+	// }
+		.mapArea {
+			top: 125px;
+		}
+
+.subHeading,
+// .searchRow,
+.mapArea {
 	z-index: -1;
 }
 
-#businessListWrapper {
-	margin-top: 90%;
+@media (min-width: 992px) {
+	.subHeading {
+		z-index: 1;
+	}
 }
 
 /* business content styles */
+#businessListWrapper {
+	margin-top: calc(58px + 34px + 43px + 50%);
+		@media (min-width: 992px) {
+			margin-top: 125px;
+		}
+}
+
 h3 {
 	font-size: $medium-font;
 }
