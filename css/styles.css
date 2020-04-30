@@ -1,7 +1,8 @@
 /* main page format */
 body {
   font-size: 1em;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden; }
 
 /* header styles */
 header {
@@ -48,10 +49,12 @@ h2 {
   .mapArea :hover {
     cursor: grab; }
 
+/*place menu index in front of absolute positioned flyout menu*/
 #menuBtn {
   z-index: 1; }
 
 #navbarMenu {
+  /*absolue positioning on small screens to place menu over top of all other content*/
   position: absolute;
   top: 0;
   z-index: 1;
@@ -59,15 +62,18 @@ h2 {
   height: 100vh;
   width: 75vw; }
   #navbarMenu ul {
+    /*position the list so it doesn't bump against very top left*/
     margin-top: 75px;
     padding-left: 40px; }
   @media (min-width: 992px) {
     #navbarMenu {
+      /*move position back to inherit so it falls into correct position*/
       position: inherit;
       height: auto;
       background-color: #e6e6e6 !important;
       font-size: 0.8em; }
       #navbarMenu ul {
+        /*remove extra spacing added on smaller screens*/
         margin-top: 0;
         padding-left: 0; } }
 
@@ -84,13 +90,8 @@ ul li {
     color: #000; }
 
 /* fixed content styles */
-.subHeading,
 .mapArea {
   z-index: -1; }
-
-@media (min-width: 992px) {
-  .subHeading {
-    z-index: 1; } }
 
 /* business content styles */
 #businessListWrapper {
