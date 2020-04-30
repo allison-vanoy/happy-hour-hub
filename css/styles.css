@@ -96,10 +96,10 @@ ul li {
 /* business content styles */
 #businessListWrapper {
   margin: 0;
-  margin-top: calc(58px + 34px + 43px + 50%); }
+  margin-top: 50%; }
   @media (min-width: 992px) {
     #businessListWrapper {
-      margin-top: 169px; } }
+      margin-top: 0; } }
 
 h3 {
   font-size: 1em; }
