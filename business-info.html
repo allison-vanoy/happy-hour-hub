@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Happy Hour Hub</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Over+the+Rainbow&display=swap" rel="stylesheet">
+
+    <!--font-awesome version 5-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">  
+</head>
+
+<body>
+	<!--banner-->
+	<header class="jumbotron-fluid pb-0 pt-1 mb-0">
+        <div class="row">
+            <!--main title-->
+            <div class="col-8 col-lg-6 text-center text-lg-right text-lg-right mt-1 order-lg-first">
+                <h1><a href="index.html">Happy Hour Hub</a></h1>
+            </div>
+            <!--sub title (large screen)-->
+            <div class="col-lg-6 d-none d-lg-block text-left mt-4 subHeading order-lg-first">
+                <h2>find or add happy hour specials near you</h2>
+            </div>
+
+            <!--menu toggle control-->
+            <nav class="col-2 col-lg-12 order-first navbar navbar-expand-lg navbar-light">
+                <button id="menuBtn" class="navbar-toggler ml-2 border-0" type="button" data-toggle="collapse" data-target="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!--collapsing menu flyout-->
+                <!--menu options-->
+                <div id="navbarMenu" class="collapse navbar-collapse">
+                    <ul id="navList mt-4 mt-lg-0" class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Add New Happy Hour</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">My Account</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sign-In</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Create Account</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+
+        <div class="row pb-3">
+            <!--search row-->
+            <div class="col-8 col-md-5 col-xl-3 mx-auto d-none d-lg-block">    
+                <div id="searcharea" class="bg-white d-lg-inline-block">
+                    <input class="border-0 ml-4" type="search" placeholder="search by zip code">
+                    <div class="d-inline-block"><i class="fa fa-search"></i></div>
+                </div>
+                <!--filter icon (large screen)-->
+                <div class="d-none d-lg-inline-block">
+                    <i class="fa fa-filter"></i>
+                </div>
+            </div>
+
+        </div>
+	</header>
+
+	<!--main content container-->
+	<div class="container mt-4">
+	</div>
+
+
+    <!--script links-->
+	<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!--font-awesome version 5-->
+    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/v4-shims.js"></script>
+  
+    <!--custom JS-->
+    <script src="js/scripts.js"></script>
+
+</body>
+
+</html>
