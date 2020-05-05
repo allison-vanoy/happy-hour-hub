@@ -174,12 +174,25 @@ business info page styles
 	img {
 		height: 300px;
 		object-fit: cover;
+		display: block;
+	}
+
+	.carousel-item {
+		@media (min-width: 992px) {
+			width: 33%;
+			display: inline-block;
+		}
 	}
 }
 
 .specials-border {
 	border-bottom: 1px solid #000;
-	width: 80%;
+	width: 90%;
+}
+
+.specials-time {
+	font-size: $large-font;
+	font-family: $header-font;
 }
 
 h3 {

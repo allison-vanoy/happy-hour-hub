@@ -22,7 +22,7 @@
 
 <body>
 	<!--banner-->
-	<header class="jumbotron-fluid pb-0 pt-1 mb-0">
+	<header class="jumbotron-fluid pb-0 pt-1 mb-0 sticky-top">
         <div class="row">
             <!--main title-->
             <div class="col-8 col-lg-6 text-center text-lg-right text-lg-right mt-1 order-lg-first">
@@ -30,7 +30,7 @@
             </div>
             <!--sub title (large screen)-->
             <div class="col-lg-6 d-none d-lg-block text-left mt-4 order-lg-first">
-                <p class="subheading">find or add happy hour specials near you</p>
+                <p class="subHeading">find or add happy hour specials near you</p>
             </div>
 
             <!--menu toggle control-->
@@ -67,7 +67,7 @@
 
         </div>
 
-        <div class="row">
+        <div class="row pb-3">
             <!--search row-->
             <div class="col-8 col-md-5 col-xl-3 mx-auto d-none d-lg-block">    
                 <div id="searcharea" class="bg-white d-lg-inline-block">
@@ -115,7 +115,7 @@
         start business information
         ---------------------->
         <div id="businessContent" class="row">
-            <div class="col-lg-4 p-0 offset-lg-8">
+            <div class="col-12 p-0">
                 <!--business content (sample 1)-->
                 <div class="businessContainer border bg-white p-2">
                     <!--business name and distance-->
@@ -124,7 +124,7 @@
                         <p class="col text-right">0.2m away</p>
                     </div>
 
-                    <!--business addressanc contact icons-->
+                    <!--business address and contact icons-->
                     <div class="row pb-0">
                         <p class="col-10 mb-0 address">1234 Business Address<br />City, Sate Zip</p>
                         <div class="col-1 px-0">
@@ -149,52 +149,108 @@
                     <!--happy hour time-->
                     <div class="row">
                         <div class="col">
-                            <p class="text-center specials-border mx-auto">4:30pm - 6:30pm</p>
+                            <p class="text-center specials-border mx-auto specials-time">4:30pm - 6:30pm</p>
                         </div>
                     </div>
+
                    <!---------------------
                     start list of specials
                     ---------------------->
+                    <!--item 1-->
                     <!--special information-->
                     <div class="row specialsDetails">
                         <i class="col-2 fas fa-lg fa-hamburger pr-0 mt-1"></i>
                         <h3 class="col-6 pl-0 mb-1">Bone-in wings</h3>
-                        <p class="col-1 mb-0">$</p>
-                        <p class="col text-left pl-0 mb-0">1/2 price</p>
+                        <h3 class="col-1 mb-0">$</h3>
+                        <h3 class="col text-left pl-0 mb-0">1/2 price</h3>
                     </div>
                     <!--day(s) availability-->
                     <div class="row">
-                        <div class="col offset-2">
+                        <div class="col offset-2 pl-0">
                             <h4 class="avail-day">Available: Wednesday</h4>
                         </div>
                     </div>
 
+                    <!--# of people liked-->
+                    <div class="row">
+                        <div class="col offset-2 pl-0">
+                            <p class="upVotes"><span>45</span> people have enjoyed this happy hour deal.</p>
+                        </div>
+                    </div>
+
+                    <!--confirm deal thumbs-->
+                    <div class="row">
+                        <h3 class="col-12 text-center">Confirm this deal</h3>
+                    </div>
+                    <div class="row pb-3 mb-4 specials-border mx-auto">
+                        <a class="col-6 text-right thumbUp" href="#"><i class="fas fa-2x fa-thumbs-up"></i></a>
+                        <a class="col-6 text-left thumbDown" href="#"><i class="fas fa-2x fa-thumbs-down"></i></a>
+                    </div>
+
+
+
+                    <!--item 2-->
                     <!--special information-->
                     <div class="row specialsDetails">
                         <i class="col-2 fas fa-lg fa-beer pr-0 mt-1"></i>
                         <h3 class="col-6 pl-0 mb-1">Domestic draughts</h3>
-                        <p class="col-1 mb-0">$</p>
-                        <p class="col text-left pl-0 mb-0">2</p>
+                        <h3 class="col-1 mb-0">$</h3>
+                        <h3 class="col text-left pl-0 mb-0">2</h3>
                     </div>
                     <!--day(s) availability-->
                     <div class="row">
-                        <div class="col offset-2">
-                            <h4 class="avail-day">Available: Wednesday</h4>
+                        <div class="col offset-2 pl-0">
+                            <h4 class="avail-day">Available: Tuesday, Thursday</h4>
                         </div>
                     </div>
 
+                    <!--# of people liked-->
+                    <div class="row">
+                        <div class="col offset-2 pl-0">
+                            <p class="upVotes"><span>31</span> people have enjoyed this happy hour deal.</p>
+                        </div>
+                    </div>
+
+                    <!--confirm deal thumbs-->
+                    <div class="row">
+                        <h3 class="col-12 text-center">Confirm this deal</h3>
+                    </div>
+                    <div class="row pb-3 mb-4 specials-border mx-auto">
+                        <a class="col-6 text-right thumbUp" href="#"><i class="fas fa-2x fa-thumbs-up"></i></a>
+                        <a class="col-6 text-left thumbDown" href="#"><i class="fas fa-2x fa-thumbs-down"></i></a>
+                    </div>
+
+
+
+                    <!--item 3-->
                     <!--special information-->
                     <div class="row specialsDetails">
                         <i class="col-2 fas fa-lg fa-beer pr-0 mt-1"></i>
                         <h3 class="col-6 pl-0 mb-1">House wine</h3>
-                        <p class="col-1 mb-0">$</p>
-                        <p class="col text-left pl-0 mb-0">1.00 off</p>
+                        <h3 class="col-1 mb-0">$</h3>
+                        <h3 class="col text-left pl-0 mb-0">1.00 off</h3>
                     </div>
                     <!--day(s) availability-->
                     <div class="row">
-                        <div class="col offset-2">
-                            <h4 class="avail-day">Available: Wednesday</h4>
+                        <div class="col offset-2 pl-0">
+                            <h4 class="avail-day">Available: Monday, Tuesday, Wednesday, Thursday, Friday</h4>
                         </div>
+                    </div>
+
+                    <!--# of people liked-->
+                    <div class="row">
+                        <div class="col offset-2 pl-0">
+                            <p class="upVotes"><span>8</span> people have enjoyed this happy hour deal.</p>
+                        </div>
+                    </div>
+
+                    <!--confirm deal thumbs-->
+                    <div class="row">
+                        <h3 class="col-12 text-center">Confirm this deal</h3>
+                    </div>
+                    <div class="row pb-3 mb-4">
+                        <a class="col-6 text-right thumbUp" href="#"><i class="fas fa-2x fa-thumbs-up"></i></a>
+                        <a class="col-6 text-left thumbDown" href="#"><i class="fas fa-2x fa-thumbs-down"></i></a>
                     </div>
                     <!-----------------------
                         end list of specials

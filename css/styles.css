@@ -137,11 +137,21 @@ business info page styles
 /* carousel formatting */
 #foodSlide img {
   height: 300px;
-  object-fit: cover; }
+  object-fit: cover;
+  display: block; }
+
+@media (min-width: 992px) {
+  #foodSlide .carousel-item {
+    width: 33%;
+    display: inline-block; } }
 
 .specials-border {
   border-bottom: 1px solid #000;
-  width: 80%; }
+  width: 90%; }
+
+.specials-time {
+  font-size: 1.7em;
+  font-family: "Oswald", sans-serif; }
 
 h3 {
   font-size: 1.7em; }
