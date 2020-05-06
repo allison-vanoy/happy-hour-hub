@@ -203,6 +203,11 @@ h4 {
 	font-family: $header-font;
 	font-size: $medium-font;
 }
+
+.thumbUp,
+.thumbDown {
+	cursor: pointer;
+}
 /***********************
 end of business info page styles
 ***********************/
