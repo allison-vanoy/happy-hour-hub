@@ -29,21 +29,17 @@ section in form
 	let cloneContent = $('.happyHourContent');
 
 	$('#happyHourAdd').click(function() {
-		$(cloneContent[0]).clone() //duplicate content section
+		$(cloneContent).clone() //duplicate content section
 							.find('input:text').val('').end() //clear input values
 							.find('input:checkbox').prop('checked', false).end() //clear selected checkboxes
-							.appendTo('#happyHourContainer').addClass('mt-4'); //add duplicate to parent div
+							.appendTo('#happyHourContainer'); //add duplicate to parent div
 	});
 
-	//delete happy hour section when X is clicked unless it's the last one
-	let deleteBtnArr = $.find('.happyHourDelete');
-	let deleteContent = $.find('.happyHourContent');
 
-	$(deleteBtnArr).each(function(i) {
-		$(this).click(function() {
-			console.log(i);
-	//		$(deleteContent[i]).remove();
-		});
+	$(document).on('click', '.happyHourDelete', function() {
+		if( $('.happyHourDelete').length > 1 ) {
+			$(this).closest('.happyHourContent').remove();
+		}
 	});
 /*************************
 end add/delete another happy hour
