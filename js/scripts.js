@@ -7,6 +7,9 @@
 		let numLikes = $(this).closest('.happyHourSpecial').find('.voteTotal span');
 		let numLikesVal = parseInt(numLikes[0].innerText);
 		numLikes[0].innerText = numLikesVal + 1;
+		//change thumb color and make other thumb grey
+		$(this).css('color', '#d7ebba');
+		$(this).siblings('.thumbDown').css('color', '#d4d4d4');
 	});
 
 	//decrease likes on downvote
@@ -15,6 +18,9 @@
 		let numLikes = $(this).closest('.happyHourSpecial').find('.voteTotal span');
 		let numLikesVal = parseInt(numLikes[0].innerText);
 		numLikes[0].innerText = numLikesVal - 1;
+		//change thumb color and make other thumb grey
+		$(this).css('color', '#d7ebba');
+		$(this).siblings('.thumbUp').css('color', '#d4d4d4');
 	});
 /*************************
  end voting

@@ -1,30 +1,38 @@
+/*font variables*/
+/*color variables*/
+/*font size variables*/
 /*********************
 styles shared across pages
 *********************/
 /* main body format */
 body {
-  font-size: 1em;
+  font-size: 20px;
   font-family: "Roboto", sans-serif;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  color: #200810; }
 
 /* header styles */
 header {
-  background-color: #e6e6e6; }
+  background-color: #edc159; }
+  header a:hover {
+    text-decoration: none;
+    color: #a57239; }
 
 h1,
 h2 {
   font-family: "Oswald", sans-serif;
-  font-size: 1.7em; }
+  font-size: 30px; }
   h1 a,
   h2 a {
-    color: #000; }
-  h1 a:hover,
-  h2 a:hover {
-    text-decoration: none; }
+    color: #200810; }
   @media (min-width: 992px) {
     h1,
     h2 {
-      font-size: 2.3em; } }
+      font-size: 40px; } }
+
+h3 {
+  font-size: 20px;
+  color: #6c978f; }
 
 /* page filter */
 .fa-filter {
@@ -33,7 +41,7 @@ h2 {
 /* search area and sub header */
 .subHeading {
   font-family: "Over the Rainbow", cursive;
-  font-size: 1em; }
+  font-size: 20px; }
 
 /*place menu index in front of absolute positioned flyout menu*/
 #menuBtn {
@@ -44,7 +52,7 @@ h2 {
   position: absolute;
   top: 0;
   z-index: 1;
-  background-color: #fff;
+  background: #fff;
   height: 100vh;
   width: 75vw; }
   #navbarMenu ul {
@@ -56,8 +64,8 @@ h2 {
       /*move position back to inherit so it falls into correct position*/
       position: inherit;
       height: auto;
-      background-color: #e6e6e6 !important;
-      font-size: 0.8em; }
+      background-color: #edc159 !important;
+      font-size: 13px; }
       #navbarMenu ul {
         /*remove extra spacing added on smaller screens*/
         margin-top: 0;
@@ -71,9 +79,14 @@ h2 {
 
 ul li {
   font-family: "Oswald", sans-serif;
-  font-size: 1.7em; }
-  ul li a {
-    color: #000; }
+  font-size: 30px; }
+
+/*icons*/
+.fa-hamburger {
+  color: #a57239; }
+
+.fa-beer {
+  color: #edc159; }
 
 /*********************
 end styles shared across pages
@@ -88,7 +101,8 @@ index page styles
   #searcharea input:focus {
     outline: none; }
   #searcharea input {
-    width: 80%; }
+    width: 80%;
+    font-size: 13px; }
   @media (min-width: 992px) {
     #searcharea {
       width: 85%; } }
@@ -111,28 +125,54 @@ index page styles
     #businessListContent {
       margin-top: 0; } }
 
-h3 {
-  font-size: 1em; }
-
 .distance {
-  font-size: 0.6em; }
+  font-size: 11px; }
 
 .specialsDetails,
 .seeMore {
-  font-size: 0.8em; }
+  font-size: 13px; }
   .specialsDetails a,
   .seeMore a {
-    color: #000;
+    color: #200810;
     text-decoration: underline; }
+  .specialsDetails a:hover,
+  .seeMore a:hover {
+    color: #6c978f; }
 
 /*********************
 index page styles
 *********************/
 /***********************
+add happy hour page styles
+***********************/
+label {
+  font-size: 13px; }
+
+#happyHourAdd {
+  background-color: #edc159;
+  color: #200810;
+  border: none; }
+
+#submitHappyHour {
+  background-color: #d7ebba; }
+
+/***********************
+end add happy hour page styles
+***********************/
+/***********************
 business info page styles
 ***********************/
 #businessContent {
   margin: 0; }
+  #businessContent h2 {
+    color: #6c978f; }
+  #businessContent h3 {
+    color: #200810;
+    font-size: 20px; }
+  #businessContent .distance,
+  #businessContent .address,
+  #businessContent .voteTotal {
+    font-size: 13px; }
 
 /* carousel formatting */
 #foodSlide img {
@@ -145,24 +185,29 @@ business info page styles
     width: 33%;
     display: inline-block; } }
 
+.fa-star,
+.fa-star-half-alt {
+  color: #edc159; }
+
 .specials-border {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #200810;
   width: 90%; }
 
 .specials-time {
-  font-size: 1.7em;
+  font-size: 30px;
   font-family: "Oswald", sans-serif; }
-
-h3 {
-  font-size: 1.7em; }
 
 h4 {
   font-family: "Oswald", sans-serif;
-  font-size: 1em; }
+  font-size: 20px; }
 
 .thumbUp,
 .thumbDown {
+  color: #d4d4d4;
   cursor: pointer; }
+  .thumbUp :hover,
+  .thumbDown :hover {
+    color: #d7ebba; }
 
 /***********************
 end of business info page styles

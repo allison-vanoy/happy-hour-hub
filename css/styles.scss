@@ -1,12 +1,19 @@
-$primary-color: #e6e6e6;
+/*font variables*/
 $primary-font: 'Roboto', sans-serif;
 $header-font: 'Oswald', sans-serif;
 $cursive-font: 'Over the Rainbow', cursive;
-$x-large-font: 2.3em;
-$large-font: 1.7em;
-$medium-font: 1em;
-$small-font: 0.8em;
-$x-small-font: 0.6em;
+/*color variables*/
+$primary-color: #edc159;
+$secondary-color: #d7ebba;
+$tertiary-color: #6c978f;
+$primary-color-dark: #200810;
+$secondary-color-dark: #a57239;
+/*font size variables*/
+$x-large-font: 40px;
+$large-font: 30px;
+$medium-font: 20px;
+$small-font: 13px;
+$x-small-font: 11px;
 
 /*********************
 styles shared across pages
@@ -16,11 +23,16 @@ body {
 	font-size: $medium-font;
 	font-family: $primary-font;
 	overflow-x: hidden;
+	color: $primary-color-dark;
 }
 
 /* header styles */
 header {
 	background-color: $primary-color;
+	a:hover {
+		text-decoration: none;
+		color: $secondary-color-dark;
+	}
 }
 
 h1,
@@ -28,14 +40,16 @@ h2 {
 	font-family: $header-font;
 	font-size: $large-font;
 	a {
-		color: #000;
+		color: $primary-color-dark;
 	}	
-		a:hover {
-			text-decoration: none;
+		@media (min-width: 992px) {
+			font-size: $x-large-font;
 		}
-			@media (min-width: 992px) {
-				font-size: $x-large-font;
-			}
+}
+
+h3 {
+	font-size: $medium-font;
+	color: $tertiary-color;
 }
 
 /* page filter */
@@ -59,7 +73,7 @@ h2 {
 	position: absolute;
 	top: 0;
 	z-index: 1;
-	background-color: #fff;
+	background: #fff;
 	height: 100vh;
 	width: 75vw;
 
@@ -94,9 +108,15 @@ h2 {
 ul li {
 	font-family: $header-font;
 	font-size: $large-font;
-		a {
-			color: #000;
-		}
+}
+
+/*icons*/
+.fa-hamburger {
+	color: $secondary-color-dark;
+}
+
+.fa-beer {
+	color: $primary-color;
 }
 /*********************
 end styles shared across pages
@@ -114,6 +134,7 @@ index page styles
 		}
 		input {
 			width: 80%;
+			font-size: $small-font;
 		}
 		@media (min-width: 992px) {
 			width: 85%;
@@ -142,10 +163,6 @@ index page styles
 		}
 }
 
-h3 {
-	font-size: $medium-font;
-}
-
 .distance {
 	font-size: $x-small-font;
 }
@@ -154,8 +171,12 @@ h3 {
 .seeMore {
 	font-size: $small-font;
 		a {
-			color: #000;
+			color: $primary-color-dark;
 			text-decoration: underline;
+		}
+
+		a:hover {
+			color: $tertiary-color;
 		}
 }
 /*********************
@@ -163,10 +184,46 @@ index page styles
 *********************/
 
 /***********************
+add happy hour page styles
+***********************/
+label {
+	font-size: $small-font;
+}
+
+#happyHourAdd {
+	background-color: $primary-color;
+	color: $primary-color-dark;
+	border: none;
+}
+
+#submitHappyHour {
+	background-color: $secondary-color;
+}
+/***********************
+end add happy hour page styles
+***********************/
+
+
+/***********************
 business info page styles
 ***********************/
 #businessContent {
 	margin: 0;
+
+	h2 {
+		color: $tertiary-color;
+	}
+
+	h3 {
+		color: $primary-color-dark;
+		font-size: $medium-font;
+	}
+
+	.distance,
+	.address,
+	.voteTotal {
+		font-size: $small-font;
+	}
 }
 
 /* carousel formatting */
@@ -185,18 +242,19 @@ business info page styles
 	}
 }
 
+.fa-star,
+.fa-star-half-alt {
+	color: $primary-color;
+}
+
 .specials-border {
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid $primary-color-dark;
 	width: 90%;
 }
 
 .specials-time {
 	font-size: $large-font;
 	font-family: $header-font;
-}
-
-h3 {
-	font-size: $large-font;
 }
 
 h4 {
@@ -206,7 +264,12 @@ h4 {
 
 .thumbUp,
 .thumbDown {
+	color: #d4d4d4;
 	cursor: pointer;
+
+	:hover {
+		color: $secondary-color;
+	}
 }
 /***********************
 end of business info page styles
