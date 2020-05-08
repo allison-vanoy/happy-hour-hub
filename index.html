@@ -51,10 +51,6 @@
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link" href="#">My Account</a>
-                        </li>
-                        
-                        <li class="nav-item">
                             <a class="nav-link" id="loginLink" href="#">Sign-In</a>
                         </li>
                         
@@ -66,9 +62,106 @@
             </nav>
 
             <!--filter icon (small screen)-->
-            <div class="col-2 mt-2 ml-0 d-lg-none">
+            <!-- <div class="col-2 mt-2 ml-0 d-lg-none">
                 <i class="fa fa-filter"></i>
-            </div>
+            </div> -->
+            <a id="filterBtn" class="col-2 text-center mt-2 ml-0 d-lg-none" type="button" data-toggle="collapse" data-target="#filterMenu">
+                <i class="fa fa-filter"></i>
+            </a>
+
+            <!--filter flyout-->
+            <!--filter options-->
+            <form id="filterMenu" class="collapse">
+                <div class="form-row">
+                    <div class="col">
+                        <label class="filterLabel">Day of the Week</label>
+                        <div class="form-group col">
+                            <div class="form-check col-5 form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="monday" value="monday">
+                                <label class="form-check-label" for="monday">Monday</label>
+                            </div>
+                            <div class="form-check col-5 form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="tuesday" value="tuesday">
+                                <label class="form-check-label" for="tuesday">Tuesday</label>
+                            </div>
+                            <div class="form-check col-5 form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="wednesday" value="wednesday">
+                                <label class="form-check-label" for="wednesday">Wednesday</label>
+                            </div>					
+                            <div class="form-check col-5 form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="thursday" value="thursday">
+                                <label class="form-check-label" for="thursday">Thursday</label>
+                            </div>					
+                            <div class="form-check col-5 form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="friday" value="friday">
+                                <label class="form-check-label" for="friday">Friday</label>
+                            </div>					
+                            <div class="form-check col-5 form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="saturday" value="saturday">
+                                <label class="form-check-label" for="saturday">Saturday</label>
+                            </div>					
+                            <div class="form-check col-5 form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="sunday" value="sunday">
+                                <label class="form-check-label" for="sunday">Sunday</label>
+                            </div>
+                        </div>	
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                        <label class="filterLabel">Type of Happy Hour</label>
+                        <div class="form-group col">
+                            <div class="form-check col-3 form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="food" value="food">
+                                <label class="form-check-label" for="food">Food</label>
+                            </div>
+                            <div class="form-check col-3 form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="drink" value="drink">
+                                <label class="form-check-label" for="drink">Drink</label>
+                            </div>
+                        </div>	
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                        <label class="filterLabel">Distance</label>
+                        <div class="form-group col">
+                            <input class="form-control-range" type="range" id="distanceRange">
+                        </div>	
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                        <label class="filterLabel">Ratings</label>
+                        <div class="form-group col">
+                            <div class="form-check col-12 form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="oneStar" value="oneStar">
+                                <label class="form-check-label" for="oneStar">> 1 star</label>
+                            </div>
+                            <div class="form-check col-12 form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="twoStar" value="twoStar">
+                                <label class="form-check-label" for="twoStar">> 2 stars</label>
+                            </div>
+                            <div class="form-check col-12 form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="threeStar" value="threeStar">
+                                <label class="form-check-label" for="threeStar">> 3 stars</label>
+                            </div>
+                            <div class="form-check col-12 form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="fourStar" value="fourStar">
+                                <label class="form-check-label" for="fourStar">> 4 stars</label>
+                            </div>
+                        </div>	
+                    </div>
+                </div>
+
+                <div class="form-row mt-4">
+                    <button id="applyFilters" type="submit" class="btn btn-lg mx-auto btn-block mb-4">Apply Filters</button>
+                </div>
+            </form>
+
         </div>
 
         <div class="row pb-3">
@@ -553,9 +646,9 @@
                                     <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
                                 </div>
                                 <div class="col">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox">
-                                        <label class="form-check-label"> Remember Me</label>
+                                    <div class="form-check form-check-inline">
+                                        <input id="remember" class="form-check-input" type="checkbox">
+                                        <label class="form-check-label" for="remember"> Remember Me</label>
                                     </div>
                                 </div>
                             </div>

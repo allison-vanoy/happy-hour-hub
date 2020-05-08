@@ -47,37 +47,50 @@ h3 {
 #menuBtn {
   z-index: 1; }
 
-#navbarMenu {
+#navbarMenu,
+#filterMenu {
   /*absolue positioning on small screens to place menu over top of all other content*/
   position: absolute;
-  top: 0;
+  top: -5px;
   z-index: 1;
   background: #fff;
   height: 100vh;
   width: 75vw; }
-  #navbarMenu ul {
+  #navbarMenu ul,
+  #filterMenu ul {
     /*position the list so it doesn't bump against very top left*/
     margin-top: 75px;
     padding-left: 40px; }
   @media (min-width: 992px) {
-    #navbarMenu {
+    #navbarMenu,
+    #filterMenu {
       /*move position back to inherit so it falls into correct position*/
       position: inherit;
       height: auto;
       background-color: #edc159 !important;
       font-size: 13px; }
-      #navbarMenu ul {
+      #navbarMenu ul,
+      #filterMenu ul {
         /*remove extra spacing added on smaller screens*/
         margin-top: 0;
         padding-left: 0; } }
 
-#menuBtn {
+#filterMenu {
+  right: 0;
+  padding: 85px 50px 0; }
+
+#menuBtn,
+#filterBtn {
   z-index: 2; }
+  #menuBtn :hover,
+  #filterBtn :hover {
+    cursor: pointer; }
 
 #navList {
   padding-left: 50px; }
 
-ul li {
+ul li,
+.filterLabel {
   font-family: "Oswald", sans-serif;
   font-size: 30px; }
 
@@ -153,8 +166,17 @@ label {
   color: #200810;
   border: none; }
 
+#happyHourAdd:hover {
+  background-color: #a57239;
+  color: #fff; }
+
 #submitHappyHour {
-  background-color: #d7ebba; }
+  background-color: #6c978f;
+  color: #fff; }
+
+#submitHappyHour:hover {
+  background-color: #99c1bb;
+  color: #200810; }
 
 /***********************
 end add happy hour page styles
@@ -164,7 +186,9 @@ business info page styles
 ***********************/
 #businessContent {
   margin: 0; }
-  #businessContent h2 {
+  #businessContent h2,
+  #businessContent .fa-phone,
+  #businessContent .fa-directions {
     color: #6c978f; }
   #businessContent h3 {
     color: #200810;
@@ -207,7 +231,7 @@ h4 {
   cursor: pointer; }
   .thumbUp :hover,
   .thumbDown :hover {
-    color: #d7ebba; }
+    color: #6c978f; }
 
 /***********************
 end of business info page styles
