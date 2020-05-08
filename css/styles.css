@@ -41,7 +41,10 @@ h3 {
 /* search area and sub header */
 .subHeading {
   font-family: "Over the Rainbow", cursive;
-  font-size: 20px; }
+  font-size: 13px; }
+  @media (min-width: 992px) {
+    .subHeading {
+      font-size: 20px; } }
 
 /*place menu index in front of absolute positioned flyout menu*/
 #menuBtn {
@@ -53,14 +56,18 @@ h3 {
   position: absolute;
   top: -5px;
   z-index: 1;
-  background: #fff;
   height: 100vh;
-  width: 75vw; }
+  width: 75vw;
+  background: #fff; }
   #navbarMenu ul,
   #filterMenu ul {
     /*position the list so it doesn't bump against very top left*/
     margin-top: 75px;
-    padding-left: 40px; }
+    padding-left: 15px; }
+    @media (min-width: 992px) {
+      #navbarMenu ul,
+      #filterMenu ul {
+        padding-left: 40px; } }
   @media (min-width: 992px) {
     #navbarMenu,
     #filterMenu {
@@ -77,7 +84,10 @@ h3 {
 
 #filterMenu {
   right: 0;
-  padding: 85px 50px 0; }
+  padding: 40px 20px 0; }
+  @media (min-width: 992px) {
+    #filterMenu {
+      padding: 85px 50px 0; } }
 
 #menuBtn,
 #filterBtn {
@@ -95,7 +105,8 @@ ul li,
   font-size: 30px; }
 
 /*submit button for modals*/
-.modalSubmit {
+.modalSubmit,
+.filterSubmit {
   background-color: #6c978f;
   color: #fff; }
 
@@ -119,7 +130,7 @@ index page styles
   #searcharea input:focus {
     outline: none; }
   #searcharea input {
-    width: 80%;
+    width: 70%;
     font-size: 13px; }
   @media (min-width: 992px) {
     #searcharea {
@@ -198,7 +209,6 @@ business info page styles
   #businessContent h3 {
     color: #200810;
     font-size: 20px; }
-  #businessContent .distance,
   #businessContent .address,
   #businessContent .voteTotal {
     font-size: 13px; }

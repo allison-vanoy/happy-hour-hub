@@ -60,7 +60,11 @@ h3 {
 /* search area and sub header */
 .subHeading {
 	font-family: $cursive-font;
-	font-size: $medium-font;
+	font-size: $small-font;
+
+	@media (min-width: 992px) {
+		font-size: $medium-font;
+	}
 }
 
 /*place menu index in front of absolute positioned flyout menu*/
@@ -74,14 +78,18 @@ h3 {
 	position: absolute;
 	top: -5px;
 	z-index: 1;
-	background: #fff;
 	height: 100vh;
 	width: 75vw;
+	background: #fff;
 
 	ul {
 	/*position the list so it doesn't bump against very top left*/
 		margin-top: 75px;
-		padding-left: 40px;
+		padding-left: 15px;
+
+		@media (min-width: 992px) {
+			padding-left: 40px;
+		}
 	}
 
 	@media (min-width: 992px) {
@@ -100,7 +108,11 @@ h3 {
 
 #filterMenu {
 	right: 0;
+	padding: 40px 20px 0;
+
+	@media (min-width: 992px) {
 	padding: 85px 50px 0;
+	}
 }
 
 #menuBtn,
@@ -122,7 +134,8 @@ ul li,
 }
 
 /*submit button for modals*/
-.modalSubmit {
+.modalSubmit,
+.filterSubmit {
 	background-color: $tertiary-color;
 	color: #fff;
 }
@@ -150,7 +163,7 @@ index page styles
 			outline: none;
 		}
 		input {
-			width: 80%;
+			width: 70%;
 			font-size: $small-font;
 		}
 		@media (min-width: 992px) {
@@ -247,7 +260,6 @@ business info page styles
 		font-size: $medium-font;
 	}
 
-	.distance,
 	.address,
 	.voteTotal {
 		font-size: $small-font;
