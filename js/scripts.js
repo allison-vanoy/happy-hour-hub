@@ -53,6 +53,9 @@ end add/delete another happy hour
 
 
 
+/*************************
+ Modals
+*************************/
 //open/close login modal
 $('#loginLink').click(function() {
 	$('#loginModal').modal('show');
@@ -61,4 +64,16 @@ $('#loginLink').click(function() {
 $('.close').click(function() {
 	$('#loginModal').modal('hide');
 });
+
+//open/close create account modal
+$('#newAcctLink').click(function() {
+	$('#newAcctModal').modal('show');
+});
+
+$('.close').click(function() {
+	$('#newAcctModal').modal('hide');
+});
+/*************************
+ end modals
+*************************/
 

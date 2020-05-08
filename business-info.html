@@ -51,11 +51,11 @@
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Sign-In</a>
+                            <a class="nav-link" id="loginLink" href="#">Sign-In</a>
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Create Account</a>
+                            <a class="nav-link" id="newAcctLink" href="#">Create Account</a>
                         </li>
                     </ul>
                 </div>
@@ -270,6 +270,7 @@
     <!-----------------------
     MODALS
     ------------------------>
+    <!--sign-in modal-->
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -291,16 +292,16 @@
                                     <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
                                 </div>
                                 <div class="col">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox">
-                                        <label class="form-check-label"> Remember Me</label>
+                                    <div class="form-check form-check-inline">
+                                        <input id="remember" class="form-check-input" type="checkbox">
+                                        <label class="form-check-label" for="remember"> Remember Me</label>
                                     </div>
                                 </div>
                             </div>
                             <!--modal cancel/sign-in buttons-->
                             <div class="form-row">
-                                <button type="button" class="btn btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                                <button type="submit" class="btn btn-sm ml-1">Sign-in</button>
+                                <button type="button" class="btn ml-auto" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn ml-1 modalSubmit">Sign-in</button>
                             </div>
                         </form>
                     </div>
@@ -308,6 +309,53 @@
             </div>
         </div>
     </div>
+
+    <!--create account modal-->
+    <div id="newAcctModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Create New Account</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button> <!--X button to close out of modal window-->
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <!--modal form fields-->
+                            <div class="form-row">
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="#newEmail">Email address</label>
+                                    <input type="email" class="form-control form-control-sm" id="newEmail" placeholder="Enter email">
+                                </div>
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="#firstPassword">Password</label>
+                                    <input type="password" class="form-control form-control-sm" id="firstPassword" placeholder="Password">
+                                </div>
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="#repeatPassword">Re-Type Password</label>
+                                    <input type="password" class="form-control form-control-sm" id="repeatPassword" placeholder="Re-Type Password">
+                                </div>
+                                <div class="col">
+                                    <div class="form-check form-check-inline">
+                                        <input id="newRemember" class="form-check-input" type="checkbox">
+                                        <label class="form-check-label" for="newRemember"> Remember Me</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--modal cancel/sign-in buttons-->
+                            <div class="form-row">
+                                <button type="button" class="btn ml-auto" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn ml-1 modalSubmit">Create Account</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------------------
+    end MODALS
+    ------------------------>
 
 
 

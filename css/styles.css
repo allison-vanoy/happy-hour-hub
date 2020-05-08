@@ -94,6 +94,11 @@ ul li,
   font-family: "Oswald", sans-serif;
   font-size: 30px; }
 
+/*submit button for modals*/
+.modalSubmit {
+  background-color: #6c978f;
+  color: #fff; }
+
 /*icons*/
 .fa-hamburger {
   color: #a57239; }

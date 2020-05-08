@@ -121,6 +121,12 @@ ul li,
 	font-size: $large-font;
 }
 
+/*submit button for modals*/
+.modalSubmit {
+	background-color: $tertiary-color;
+	color: #fff;
+}
+
 /*icons*/
 .fa-hamburger {
 	color: $secondary-color-dark;
