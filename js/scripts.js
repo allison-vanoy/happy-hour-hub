@@ -56,23 +56,31 @@ end add/delete another happy hour
 /*************************
  Modals
 *************************/
-//open/close login modal
-$('#loginLink').click(function() {
-	$('#loginModal').modal('show');
-});
+	//open/close login modal
+	$('#loginLink').click(function() {
+		$('#loginModal').modal('show');
+	});
+		$('.close').click(function() {
+			$('#loginModal').modal('hide');
+		});
 
-$('.close').click(function() {
-	$('#loginModal').modal('hide');
-});
+	//open/close create account modal
+	$('#newAcctLink').click(function() {
+		$('#newAcctModal').modal('show');
+	});
+		$('.close').click(function() {
+			$('#newAcctModal').modal('hide');
+		});
 
-//open/close create account modal
-$('#newAcctLink').click(function() {
-	$('#newAcctModal').modal('show');
-});
+	//when deal is downvoted, open modal with questions
+	$('.thumbDown').click(function() {
+		$('#downVoteModal').modal('show');
+	});
+		$('.close, #downVoteModal .modalSubmit').click(function() {
+			$('#downVoteModal').modal('hide');
+			console.log($('input:selected').siblings('label').innerText);
+		});
 
-$('.close').click(function() {
-	$('#newAcctModal').modal('hide');
-});
 /*************************
  end modals
 *************************/
